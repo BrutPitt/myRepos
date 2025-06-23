@@ -289,13 +289,6 @@ int main(int, char**)
         Module.preinitializedWebGPUDevice = device;
     } );
     #else
-#ifdef __cplusplus
-extern "C" {
-#endif
-    WGPUSurface GLFW_getWGPUSurface(WGPUInstance instance, void* window);
-#ifdef __cplusplus
-}
-#endif
     static void handle_request_adapter(WGPURequestAdapterStatus status, WGPUAdapter adapter, WGPUStringView message, void *userdata1, void *userdata2)
     {
         if (status == WGPURequestAdapterStatus_Success)
